@@ -60,12 +60,11 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute w-full px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
-      {" "}
+    <div className="absolute w-full px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between ">
       {/* to overlap the header absolute is used */}
-      <img className="w-44" src={LOGO} alt="logo" />
+      <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="logo" />
       {user && (
-        <div className="flex p-2">
+        <div className="flex p-2 justify-between">
           {showGptSearch && (
             <select
               className="p-2 bg-gray-900 text-white m-2"
@@ -86,7 +85,7 @@ const Header = () => {
             {showGptSearch ? "Home" : "GPT Search"}
           </button>
           <img
-            className="w-12 h-12"
+            className="w-12 h-12 hidden"
             src="https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg"
             // src='https://avatars.githubusercontent.com/u/154825017?v=4'
             // src={user.photoURL}
